@@ -1,9 +1,7 @@
 from fastapi import FastAPI
-
+from chef import chef_claude
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-  print('holiwi')
-  return {"message": "Hello World asas"}
+@app.post("/recipe")
+async def read_item(item: str):
+  return chef_claude(item.ingredients)

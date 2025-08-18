@@ -5,3 +5,5 @@ lib64/
 lib64
 pyvenv.cfg
 __pycache__/
+.env
+request.http
