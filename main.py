@@ -6,7 +6,7 @@ from chef import chef_claude
 app = FastAPI()
 
 origins = [
-    "https://my-ai-chef.netlify.app/"  
+    "https://my-ai-chef.netlify.app"  
 ]
 
 app.add_middleware(
