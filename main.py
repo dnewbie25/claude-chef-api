@@ -6,13 +6,14 @@ from chef import chef_claude
 app = FastAPI()
 
 origins = [
-    "https://my-ai-chef.netlify.app/"
+    "https://my-ai-chef.netlify.app/",
+    "http://localhost"
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
