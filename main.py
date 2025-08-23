@@ -5,10 +5,12 @@ from chef import chef_claude
 
 app = FastAPI()
 
-origins = [
-    "https://my-ai-chef.netlify.app/",
-    "http://localhost"
-]
+# origins = [
+#     "https://my-ai-chef.netlify.app/",
+#     "http://localhost:"
+# ]
+
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
